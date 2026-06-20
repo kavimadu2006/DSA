@@ -2,13 +2,16 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class QueueStackPushFriendly {
+
     Queue<Integer> q1 = new LinkedList<>();
     Queue<Integer> q2 = new LinkedList<>();
 
+    // Push: O(1)
     public void push(int x) {
         q1.add(x);
     }
 
+    // Pop: O(n)
     public int pop() {
         if (q1.isEmpty()) {
             System.out.println("Stack is Empty");
@@ -21,6 +24,7 @@ public class QueueStackPushFriendly {
 
         int popped = q1.remove();
 
+        // swap queues
         Queue<Integer> temp = q1;
         q1 = q2;
         q2 = temp;
