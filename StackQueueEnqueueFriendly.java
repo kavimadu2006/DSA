@@ -1,13 +1,16 @@
 import java.util.Stack;
 
 public class StackQueueEnqueueFriendly {
+
     Stack<Integer> s1 = new Stack<>();
     Stack<Integer> s2 = new Stack<>();
 
+    // Enqueue: O(1)
     public void enqueue(int value) {
         s1.push(value);
     }
 
+    // Dequeue: O(n)
     public int dequeue() {
         if (s1.isEmpty() && s2.isEmpty()) {
             System.out.println("Queue is Empty");
